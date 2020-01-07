@@ -40,7 +40,7 @@ void adv() {
 void error(Token* tok, const char* err) {
 	if (parser.hadError) synch();
 	parser.hadError = true;
-	fprintf(stderr, "%s [line %d] -> %s", err, 
+	fprintf(stderr, "%s [line %d] -> %s\n", err,
 		tok->line, tok->start);
 }
 
@@ -65,7 +65,7 @@ void parsePrec(Precedence prec) {
 		synch();
 		return;
 	}
-	
+
 	prefix();
 	while (prec <= getRule(parser.current.type)->precedence) {
 		adv();
@@ -146,8 +146,12 @@ void grouping() {
 }
 
 void synch() {
+	TokenType tt;
 	if (parser.hadError)
+		tt = (TokenType)-1;
 		while (peek() != '\n') {
-			getToken();
+			tt = getToken().type;
+			if (tt == T_EOF)
+				break;
 		}
 }

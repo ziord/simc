@@ -43,7 +43,7 @@ void parse() {
 			int c;
 			while ((c = getchar()) != '\n')
 				;
-			getchar();
+			//getchar();
 			fprintf(stdout, "\n");
 			continue;
 		}
