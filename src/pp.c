@@ -1,6 +1,5 @@
-#include "../include/visitor.h"
-#include "../include/pp.h"
-#include "../include/ast.h"
+#include "pp.h"
+#include "ast.h"
 void binary();
 void unary();
 void number_();

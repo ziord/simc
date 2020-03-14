@@ -1,5 +1,5 @@
-#include "../include/visitor.h"
-#include "../include/utils.h"
+#include "visitor.h"
+#include "utils.h"
 //#define PRINT_FREE_TRACE
 
 void dispatch_visit_(AST* root) {

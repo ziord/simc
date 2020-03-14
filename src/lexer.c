@@ -1,4 +1,4 @@
-#include "../include/lexer.h"
+#include "lexer.h"
 
 Token makeToken(TokenType type) {
 	Token tok;

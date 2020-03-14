@@ -1,6 +1,6 @@
-#include "../include/lexer.h"
-#include "../include/pp.h"
-#include "../include/visitor.h"
+#include "lexer.h"
+#include "pp.h"
+#include "visitor.h"
 
 #define PRINT_EXPR_TRACE
 
